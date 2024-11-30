@@ -902,23 +902,18 @@
             }
         }
 
-        /* Add this to the existing CSS section */
-        .edit-page-link {
-            color: var(--light);
-            text-decoration: underline;
-            opacity: 0.8;
-            transition: var(--transition);
-        }
-
-        .edit-page-link:hover {
-            opacity: 1;
-        }
-
         .footer-bottom {
-            padding-top: 2rem;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 2rem;
+        }
+
+        .footer-statement {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--gray);
+            text-align: center;
+            padding: 1rem;
         }
     </style>
 </head>
@@ -1511,10 +1506,9 @@
         </div>
 
         <div class="container footer-bottom">
-            <a href="https://github.com/CyberChainXyz/cyberchainxyz.github.io" target="_blank"
-                class="edit-page-link">
-                Edit this page
-            </a>
+            <p class="footer-statement">
+                CyberChain is an open-source software project. The CyberChain blockchain network's native digital asset, CCX, is not controlled by any individual or entity, including the OpenCyber team. CCX is not a security, nor is it intended as a financial investment. Furthermore, no Initial Coin Offering (ICO) or similar public sale has ever been conducted for CCX. The existence of CCX is required for the operation of the CyberChain blockchain network.
+            </p>
         </div>
     </footer>
 
