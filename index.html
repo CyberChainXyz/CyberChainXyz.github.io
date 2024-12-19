@@ -243,35 +243,6 @@
             opacity: 0.9;
         }
 
-        .hero-links {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-link {
-            text-decoration: none;
-            color: var(--light);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-            opacity: 0.8;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .hero-link:hover {
-            opacity: 1;
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-
-
         /* Features Section */
         .features {
             padding: 8rem 0;
@@ -581,37 +552,6 @@
         @media (max-width: 768px) {
             .specs-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-        }
-
-        .hero-links {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero-links a {
-            text-decoration: none;
-            color: var(--white);
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            opacity: 0.8;
-        }
-
-        .hero-links a:hover {
-            opacity: 1;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .hero-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
             }
         }
 
@@ -1141,6 +1081,15 @@
             <path
                 d="M256 64l128 0 0 64-128 0 0-64zM240 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l48 0 0 32L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0 0 32-48 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l160 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-48 0 0-32 256 0 0 32-48 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l160 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-48 0 0-32 96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-256 0 0-32 48 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48L240 0zM96 448l0-64 128 0 0 64L96 448zm320-64l128 0 0 64-128 0 0-64z" />
         </symbol>
+
+        <symbol id="icon-discussion" viewBox="0 0 24 24">
+            <path
+                d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 14.25 14H8.061l-2.574 2.573A1.458 1.458 0 0 1 3 15.543V14H1.75A1.75 1.75 0 0 1 0 12.25v-9.5C0 1.784.784 1 1.75 1ZM1.5 2.75v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Z">
+            </path>
+            <path
+                d="M22.5 8.75a.25.25 0 0 0-.25-.25h-3.5a.75.75 0 0 1 0-1.5h3.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0 1 22.25 20H21v1.543a1.457 1.457 0 0 1-2.487 1.03L15.939 20H10.75A1.75 1.75 0 0 1 9 18.25v-1.465a.75.75 0 0 1 1.5 0v1.465c0 .138.112.25.25.25h5.5a.75.75 0 0 1 .53.22l2.72 2.72v-2.19a.75.75 0 0 1 .75-.75h2a.25.25 0 0 0 .25-.25v-9.5Z">
+            </path>
+        </symbol>
     </svg>
 
     <header class="transparent-header">
@@ -1207,6 +1156,12 @@
                                 <use xlink:href="#icon-github" />
                             </svg>
                             <span>GitHub</span>
+                        </a>
+                        <a href="https://github.com/orgs/CyberChainXyz/discussions" class="quick-link" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-discussion" />
+                            </svg>
+                            <span>Discussions</span>
                         </a>
                     </div>
                 </div>
@@ -1532,6 +1487,12 @@
                             </svg>
                             GitHub
                         </a>
+                        <a href="https://github.com/orgs/CyberChainXyz/discussions" class="quick-link" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-discussion"></use>
+                            </svg>
+                            Community Discussions
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1539,7 +1500,11 @@
 
         <div class="container footer-bottom">
             <p class="footer-statement">
-                CyberChain is an open-source software project. The CyberChain blockchain network's native digital asset, CCX, is not controlled by any individual or entity, including the OpenCyber team. CCX is not a security, nor is it intended as a financial investment. Furthermore, no Initial Coin Offering (ICO) or similar public sale has ever been conducted for CCX. The existence of CCX is required for the operation of the CyberChain blockchain network.
+                CyberChain is an open-source software project. The CyberChain blockchain network's native digital asset,
+                CCX, is not controlled by any individual or entity, including the OpenCyber team. CCX is not a security,
+                nor is it intended as a financial investment. Furthermore, no Initial Coin Offering (ICO) or similar
+                public sale has ever been conducted for CCX. The existence of CCX is required for the operation of the
+                CyberChain blockchain network.
             </p>
         </div>
     </footer>
