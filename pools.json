@@ -1,0 +1,32 @@
+[
+    [
+        "Solo",
+        [
+            [
+                "Local",
+                "ws://127.0.0.1:8546"
+            ]
+        ]
+    ],
+    [
+        "CoolPool",
+        [
+            [
+                "Main",
+                "ws://ccx.coolpool.top:14003"
+            ],
+            [
+                "EU",
+                "ws://eu.coolpool.top:14003"
+            ],
+            [
+                "US",
+                "ws://us.coolpool.top:14003"
+            ],
+            [
+                "ASIA",
+                "ws://asia.coolpool.top:14003"
+            ]
+        ]
+    ]
+]
