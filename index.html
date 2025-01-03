@@ -1054,6 +1054,197 @@
             opacity: 1;
             border-bottom-color: var(--secondary);
         }
+
+        /* CCX Desktop Section */
+        .ccx-desktop {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--darker) 0%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ccx-desktop .section-header h2 {
+            color: var(--white);
+            background: linear-gradient(45deg, var(--white), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ccx-desktop .section-header p {
+            color: var(--light);
+            opacity: 0.9;
+        }
+
+        .desktop-feature .feature-icon {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 1.25rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .desktop-feature .feature-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .desktop-feature .feature-text p {
+            color: var(--light);
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .desktop-preview {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            aspect-ratio: 16/9;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+        }
+
+        .desktop-cta .btn-primary {
+            background: var(--secondary);
+        }
+
+        .desktop-cta .btn-primary:hover {
+            background: var(--secondary);
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .desktop-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            padding: 2rem 0;
+        }
+
+        .desktop-features {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-list {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+        }
+
+        .desktop-feature {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .desktop-feature .feature-icon {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 1.25rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .desktop-feature:hover .feature-icon {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .desktop-feature .feature-icon .icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .desktop-feature .feature-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .desktop-feature .feature-text p {
+            color: var(--light);
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .desktop-preview-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .preview-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .preview-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .preview-image.active {
+            opacity: 1;
+        }
+
+        .desktop-cta {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 1024px) {
+            .feature-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .desktop-feature {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-cta .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
@@ -1314,12 +1505,11 @@
                     <p class="hero-description">A Layer 1 blockchain with GPU-friendly PoW, built for the next
                         generation of decentralized applications.</p>
                     <div class="hero-buttons">
-                        <a href="https://github.com/CyberChainXyz/go-cyberchain" target="_blank"
-                            class="btn btn-primary">
+                        <a href="#ccx-desktop" class="btn btn-primary">
                             <svg class="icon">
                                 <use xlink:href="#icon-download" />
                             </svg>
-                            Run CyberChain
+                            CCX Desktop
                         </a>
                         <button onclick="addWeb3Network()" class="btn btn-primary">
                             <svg class="icon">
@@ -1335,23 +1525,17 @@
                             </svg>
                             <span>Explorer</span>
                         </a>
-                        <a href="https://github.com/CyberChainXyz/xMiner" target="_blank" class="quick-link">
+                        <a href="https://github.com/orgs/CyberChainXyz/discussions" class="quick-link" target="_blank">
                             <svg class="icon">
-                                <use xlink:href="#icon-microchip" />
+                                <use xlink:href="#icon-discussion" />
                             </svg>
-                            <span>Mining</span>
+                            <span>Discussions</span>
                         </a>
                         <a href="https://x.com/opencyberxyz" target="_blank" class="quick-link">
                             <svg class="icon">
                                 <use xlink:href="#icon-twitter" />
                             </svg>
                             <span>Twitter</span>
-                        </a>
-                        <a href="https://github.com/orgs/CyberChainXyz/discussions" class="quick-link" target="_blank">
-                            <svg class="icon">
-                                <use xlink:href="#icon-discussion" />
-                            </svg>
-                            <span>Discussions</span>
                         </a>
                         <a href="#community" class="quick-link">
                             <svg class="icon">
@@ -1416,6 +1600,74 @@
                     </div>
                     <h3>Low Transaction Fees</h3>
                     <p>Affordable transaction costs for users and developers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CCX Desktop Section -->
+    <section class="ccx-desktop" id="ccx-desktop">
+        <div class="container">
+            <div class="section-header">
+                <h2>CCX Desktop</h2>
+                <p>Modern all-in-one desktop app for CyberChain by OpenCyber team</p>
+            </div>
+            <div class="desktop-content">
+                <div class="desktop-features">
+                    <div class="feature-list">
+                        <div class="desktop-feature">
+                            <div class="feature-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-cube" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Modern Interface</h3>
+                                <p>Clean and intuitive design for easy operation</p>
+                            </div>
+                        </div>
+                        <div class="desktop-feature">
+                            <div class="feature-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-microchip" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>One-Click Mining</h3>
+                                <p>Built-in node and xMiner with SOLO/Pool support</p>
+                            </div>
+                        </div>
+                        <div class="desktop-feature">
+                            <div class="feature-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-shield-alt" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Secure & Reliable</h3>
+                                <p>Open source with secure Github Actions builds</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="desktop-preview-wrapper">
+                    <div class="desktop-preview">
+                        <div class="preview-container">
+                            <img src="./assets/images/ccx-desktop/download.png" alt="CCX Desktop Download Screen" class="preview-image active">
+                            <img src="./assets/images/ccx-desktop/mining.png" alt="CCX Desktop Mining Interface" class="preview-image">
+                            <img src="./assets/images/ccx-desktop/node.png" alt="CCX Desktop Node Management" class="preview-image">
+                            <img src="./assets/images/ccx-desktop/about.png" alt="CCX Desktop About Screen" class="preview-image">
+                        </div>
+                    </div>
+                    <div class="desktop-cta">
+                        <a href="https://github.com/OpenCyberXyz/ccx-desktop/releases" target="_blank"
+                            class="btn btn-primary">
+                            <svg class="icon">
+                                <use xlink:href="#icon-download" />
+                            </svg>
+                            Download CCX Desktop
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1628,7 +1880,8 @@
                         </svg>
                         Run a Node
                     </a>
-                    <a href="https://github.com/CyberChainXyz/xMiner" target="_blank" class="btn btn-primary">
+                    <a href="https://github.com/orgs/CyberChainXyz/discussions/categories/mining" target="_blank"
+                        class="btn btn-primary">
                         <svg class="icon">
                             <use xlink:href="#icon-microchip" />
                         </svg>
@@ -1643,7 +1896,10 @@
         <div class="container">
             <div class="section-header">
                 <h2>Community Resources</h2>
-                <p>Third-party resources created by the community members. Not affiliated with or endorsed by the OpenCyber team.<br>Want to add your service? <a href="https://github.com/orgs/CyberChainXyz/discussions" target="_blank">Share with the community</a></p>
+                <p>Third-party resources created by the community members. Not affiliated with or endorsed by the
+                    OpenCyber team.<br>Want to add your service? <a
+                        href="https://github.com/orgs/CyberChainXyz/discussions" target="_blank">Share with the
+                        community</a></p>
             </div>
             <div class="community-grid">
                 <div class="community-card">
@@ -1655,7 +1911,8 @@
                     <h3>Mining Pools</h3>
                     <div class="community-links">
                         <div class="community-link-item">
-                            <a href="https://coolpool.top/pool/ccx" target="_blank" class="main-link">1. CoolPool (coolpool.top)</a>
+                            <a href="https://coolpool.top/pool/ccx" target="_blank" class="main-link">1. CoolPool
+                                (coolpool.top)</a>
                         </div>
                     </div>
                 </div>
@@ -1668,7 +1925,8 @@
                     <h3>Social Channels</h3>
                     <div class="community-links">
                         <div class="community-link-item">
-                            <a href="https://discord.com/invite/2K99ewZdjr" target="_blank" class="main-link">1. Discord</a>
+                            <a href="https://discord.com/invite/2K99ewZdjr" target="_blank" class="main-link">1.
+                                Discord</a>
                             by
                             <a href="https://x.com/StianN0R" target="_blank" class="social-link">@StianN0R</a>
                         </div>
@@ -1697,7 +1955,8 @@
                     <h3>Exchanges</h3>
                     <div class="community-links">
                         <div class="community-link-item">
-                            <a href="https://app.exbitron.com/exchange/?market=CCX-USDT" target="_blank" class="main-link">1. Exbitron CCX/USDT</a>
+                            <a href="https://app.exbitron.com/exchange/?market=CCX-USDT" target="_blank"
+                                class="main-link">1. Exbitron CCX/USDT</a>
                         </div>
                     </div>
                 </div>
@@ -1731,11 +1990,24 @@
                             </svg>
                             Explorer
                         </a>
-                        <a href="https://github.com/CyberChainXyz/xMiner" target="_blank" class="quick-link">
+                        <a href="https://github.com/orgs/CyberChainXyz/discussions" class="quick-link" target="_blank">
+                            <svg class="icon">
+                                <use xlink:href="#icon-discussion" />
+                            </svg>
+                            Community Discussions
+                        </a>
+                        <a href="https://github.com/OpenCyberXyz/ccx-desktop" target="_blank" class="quick-link">
+                            <svg class="icon">
+                                <use xlink:href="#icon-cube" />
+                            </svg>
+                            CCX Desktop
+                        </a>
+                        <a href="https://github.com/orgs/CyberChainXyz/discussions/categories/mining" target="_blank"
+                            class="quick-link">
                             <svg class="icon">
                                 <use xlink:href="#icon-microchip" />
                             </svg>
-                            Mining
+                            Mining Tutorials
                         </a>
                         <a href="https://x.com/opencyberxyz" target="_blank" class="quick-link">
                             <svg class="icon">
@@ -1749,11 +2021,11 @@
                             </svg>
                             GitHub
                         </a>
-                        <a href="https://github.com/orgs/CyberChainXyz/discussions" class="quick-link" target="_blank">
+                        <a href="https://github.com/CyberChainXyz/xMiner" target="_blank" class="quick-link">
                             <svg class="icon">
-                                <use xlink:href="#icon-discussion"></use>
+                                <use xlink:href="#icon-microchip" />
                             </svg>
-                            Community Discussions
+                            xMiner
                         </a>
                     </div>
                 </div>
@@ -2012,6 +2284,26 @@
             // Fetch stats initially and set up interval
             fetchNetworkStats();
             setInterval(fetchNetworkStats, 10000);
+        });
+
+        // CCX Desktop image rotation
+        function initDesktopPreview() {
+            const images = document.querySelectorAll('.preview-image');
+            let currentIndex = 0;
+
+            function rotateImages() {
+                images.forEach(img => img.classList.remove('active'));
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            // Rotate every 5 seconds
+            setInterval(rotateImages, 5000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initDesktopPreview();
+            // ... existing code ...
         });
 
     </script>
